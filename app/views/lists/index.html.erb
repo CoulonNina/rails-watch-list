@@ -1,0 +1,13 @@
+<div>
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+        <%= link_to "Add a new list", new_list_path, class: 'btn btn-success' %>
+  </nav>
+  <ul class="list-group">
+    <% @lists.each do |list| %>  
+    <li class="list-group-item"><%= link_to list.name, list_path(list) %></li>
+    <% end %>
+  </ul>
+</div>
+
+    

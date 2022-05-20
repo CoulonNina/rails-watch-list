@@ -1,0 +1,9 @@
+<h1>New comment</h1>
+<h5 class="modal-title">Add a movie to your <%= @list.name %> list</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+        </button>
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.input :comment %>
+  <%= f.association :movie, collection: Movie.all.order(:title), prompt: "Select a movie", input_html: { data: { controller: "tom-select" } } %>
+  <%= f.submit "Submit comment", class: "btn btn-primary" %>
+<% end %>
