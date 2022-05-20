@@ -8,6 +8,7 @@
 require "json"
 require "open-uri"
 
+List.destroy_all
 Movie.destroy_all if Rails.env.development?
 
 
