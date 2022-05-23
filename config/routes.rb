@@ -14,7 +14,7 @@ Rails.application.routes.draw do
  # get    "lists/:id/edit", to: "lists#edit", as: :edit_list
  # patch  "lists/:id",      to: "lists#update"
  # # Delete
- #delete "lists/:id",      to: "lists#destroy"
+ delete "lists/:id",      to: "lists#destroy", as: :destroy_list
 
  # get    "lists/id:/new",      to: "bookmarks#new",  as: :new_bookmark
  # post   "lists/id:",          to: "bookmarks#create"
